@@ -1,3 +1,10 @@
+/* Project: Lab3 - CUS1156_Lab2
+* Class: UniqueWords.java
+* Author: Alisen Lam
+* Date: February 21, 2026
+* This program uses the method countUnique to count the number 
+* of distinct elements in an ArrayList<String>.
+*/
 import java.util.ArrayList;
 
 public class UniqueWords
@@ -12,10 +19,20 @@ public class UniqueWords
 	  int count = 0;
 	  
       for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
+      {		
+    	 String current = list.get(i);
+    	 boolean unique = true;
+    	 
+    	 for (int j = 0; j < list.size(); j++)
 		 {
-			
+    		 if(i!=j && list.get(j).equals(current)) { //Check i!=j so you do not compare the same index
+    			 unique = false; 
+    			 break;
+    		 }
 		 }
+    	 
+    	 if(unique) 
+    		 count++;
       }
 	  return count;
    }
