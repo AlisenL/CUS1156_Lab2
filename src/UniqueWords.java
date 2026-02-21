@@ -25,7 +25,7 @@ public class UniqueWords
     	 
     	 for (int j = 0; j < list.size(); j++)
 		 {
-    		 if(i!=j && list.get(j).equals(current)) { //Check i!=j so you do not compare the same index
+    		 if(i!=j && list.get(j).equals(current)) { //Checks i!=j so you do not compare the same index
     			 unique = false; 
     			 break;
     		 }
